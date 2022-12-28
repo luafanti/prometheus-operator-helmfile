@@ -17,6 +17,13 @@ prometheus:
 grafana:
   enabled: true
   adminPassword: admin
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      folder: /tmp/dashboards
+      provider:
+        foldersFromFilesStructure: true
 
 alertmanager:
   enabled: false
