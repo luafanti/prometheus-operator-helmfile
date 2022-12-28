@@ -1,1 +1,1 @@
-# Collection of helmfiles 
+# Prometheus Operator with predefined Grafana dashboard - helmfile installation
