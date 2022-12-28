@@ -1,0 +1,22 @@
+prometheus:
+  prometheusSpec:
+    enableAdminAPI: true
+  additionalServiceMonitors:
+    - name: kube-prometheus-stack-spring-boot
+      selector:
+        matchLabels:
+          prometheus-monitoring: 'true'
+      namespaceSelector:
+        matchNames:
+          - sandbox
+      endpoints:
+        - port: management
+          interval: 5s
+          path: /actuator/prometheus
+
+grafana:
+  enabled: true
+  adminPassword: admin
+
+alertmanager:
+  enabled: false
