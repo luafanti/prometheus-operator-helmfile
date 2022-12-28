@@ -11,6 +11,6 @@ releases:
       - vars/kube-prometheus-stack.yaml
   - name: grafana-dashboards
     namespace: monitoring
-    chart: ../local-charts/grafana-dashboards/
+    chart: local-charts/grafana-dashboards/
     needs:
       - kube-prometheus-stack
